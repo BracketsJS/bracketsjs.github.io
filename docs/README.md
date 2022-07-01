@@ -1,3 +1,4 @@
+![BracketsJS Icon](https://github.com/dinonull/bracketsjs.github.io/raw/main/favicon.png)
 # BracketsJS Docs
 ## Why
 [@JaydenDev](https://github.com/JaydenDev) developed BracketsJS using some new ideas, some code from their previous projects and ended up spending more time naming it than actually coding it. It has a few features already that'll suffice for a release and will make some things easier like dark mode for example.
