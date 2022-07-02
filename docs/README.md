@@ -1,73 +1,114 @@
-# Not to be confused with...
-> **There is currently a text editor named brackets**
-> [brackets](https://brackets.io/)
-> This is an unrelated project
-# Why I created this project
-I developed BracketsJS using some new ideas, some code from my previous projects and ended up spending more time naming it than actually coding it. It has some math aliases and DOM access aliases as well. It has a few features already that'll suffice for a release. It will make some things easier like dark mode for example.
-# The goal
-The goal of this project is to make a javascript libary that makes javascript easier to use. But make sure to learn how javascript works first.
-# Contributing
-Contributing is easy, just go to the [GitHub](https://github.com/JaydenDev/BracketsJS) and make a pull request. Don't worry about minified code, it gets minified before release.
-# Forking
-You are completely free to fork this project and make your own version. You just need to make sure to give credit to the original creator, JaydenDev. I'd prefer if you kept it open source as well.
-# Using the library
-It's as easy as linking it in your HTML in the HEAD tag
+![BracketsJS Icon](https://github.com/dinonull/bracketsjs.github.io/raw/main/favicon.png)
+# BracketsJS Docs
+## Why
+[@JaydenDev](https://github.com/JaydenDev) developed BracketsJS using some new ideas, some code from their previous projects and ended up spending more time naming it than actually coding it. It has a few features already that'll suffice for a release and will make some things easier like dark mode for example.
+
+## Goal
+The goal of this project is to make a javascript library that makes creating web apps easier to create.
+
+## Contributing
+Contributing is easy, fork the [Github repository](https://github.com/BracketsJS/BracketsJS), make the some changes that you think will benifit BracketsJS and make a pull request. It is recommended that you prefix the name of your commits and pull requests with "feat: " if it adds a new feature or "fix: " if it fixes any bugs.
+
+## Forking
+You are completely free to fork this project and make your own version that follows the MIT License. It is recommended that you give credit to our group and keep it open source as well.
+
+## Installing
+Installing BracketsJS is as easy as linking the script in the HEAD of your HTML document:
 ```html
-<script src="https://unpkg.com/bracketsjs@1.0.0/library.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.com/gh/BracketsJS/BracketsJS/dist/bundle.js"></script>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
+</html>
 ```
-# The functions
-## createElement
-Creates an element with the given tag name.
+## Methods
+### createElem
+Creates an element with the given parameters.
 ```javascript
-brackets.createElement(element, parentID, id, className, innerHTML, href);
+brackets.createElement(element[, parentId, id, className, innerHTML, href]);
 ```
-**element** - The element tag
-**parentID** - The ID of the parent element \
-**id** - The ID to give the element \
-**className** - The class to give the element \
-**innerHTML** - The HTML to give the element \
-**href** - Where to have the link point if the element is a link "a"
-## removeLinks
-Remove all link tags
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `element`     | The tag name of the new element. | No       |
+| `parentId`      | The `id` of the parent of the new element.  | Yes      |
+| `id`      | The `id` of the new element.  | Yes      |
+| `className`      | The class name of the new element.  | Yes      |
+| `innerHTML`      | The class name of the new element.  | Yes      |
+| `href`      | If the new element is a link this is the `href` atrribute of it.  | Yes      |
+### removeElem
+Removes a element.
+```javascript
+brackets.removeElem(id);
+```
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `id`     | The id of the element to remove | No       |
+### removeLinks
+Removes all link elements.
 ```javascript
 brackets.removeLinks();
 ```
-## swapStyles
-Swap the stylesheet with the stylesheet defined
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+### swapStyles
+Swaps stylesheet with the stylesheet provided.
 ```javascript
 brackets.swapStyles(stylesheet);
 ```
-**stylesheet** - Path to css file
-## addScript
-Injects as script into head tag
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `stylesheet`     | The path to the CSS stylesheet. | No       |
+### addScript
+Injects a script into the head.
 ```javascript
 brackets.addScript(script);
 ```
-## loadCSSFile
-Loads a css file
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `script`     | The path to the Javascript script. | No       |
+### loadCSSFile
+Loads a CSS file.
 ```javascript
 brackets.loadCSSFile(file);
 ```
-**script** - path to script
-## getScripts
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `file`     | The path to the CSS file. | No       |
+### swapFavicon
+Swaps favicons.
 ```javascript
-brackets.getScripts()
+brackets.swapFavicon(favicon)
 ```
-## swapFavicon
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `favicon`     | The path to the favicon. | No       |
+### toggleElemVisibility
+Toggles element visibility.
 ```javascript
-brackets.swapFavicon(path/to/favicon)
+brackets.toggleElemVisibility(id)
 ```
-## toggleElementVisibility
-```javascript
-brackets.toggleElementVisibility(id)
-```
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `id`     | The `id` of the element to toggle | No       |
 ### toggleClass
+Toggles class of element.
 ```javascript
 brackets.toggleClass(id, className)
 ```
-# Aliases
-## get
-Gets the element with the given id
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `id`     | The `id` of the element to toggle | No       |
+
+### detectURIArgs
+Detects URI arguments.
 ```javascript
-_(id)
+brackets.detectURIArgs()
 ```
+| Parameter     | Description                      | Optional |
+|:-------------:|:--------------------------------:|:--------:|
+| `id`     | The `id` of the element to toggle | No       |
